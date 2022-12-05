@@ -1,0 +1,1781 @@
+{
+  "contractName": "BlackList",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "isBlackListed",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "AddedBlackList",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "RemovedBlackList",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_maker",
+          "type": "address"
+        }
+      ],
+      "name": "getBlackListStatus",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_evilUser",
+          "type": "address"
+        }
+      ],
+      "name": "addBlackList",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_clearedUser",
+          "type": "address"
+        }
+      ],
+      "name": "removeBlackList",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.4.25+commit.59dbf8f1\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"_evilUser\",\"type\":\"address\"}],\"name\":\"addBlackList\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_maker\",\"type\":\"address\"}],\"name\":\"getBlackListStatus\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"isBlackListed\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_clearedUser\",\"type\":\"address\"}],\"name\":\"removeBlackList\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"_user\",\"type\":\"address\"}],\"name\":\"AddedBlackList\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"_user\",\"type\":\"address\"}],\"name\":\"RemovedBlackList\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{\"transferOwnership(address)\":{\"details\":\"Allows the current owner to transfer control of the contract to a newOwner.\",\"params\":{\"newOwner\":\"The address to transfer ownership to.\"}}}},\"userdoc\":{\"methods\":{\"getBlackListStatus(address)\":{\"notice\":\"//// Getter to allow the same blacklist to be used also by other contracts (including upgraded Tether) ///////\"}}}},\"settings\":{\"compilationTarget\":{\"/Users/huyvu/Project/Quesera/sources/quesera-sm/BreStableCoin/contracts/BlackList.sol\":\"BlackList\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/huyvu/Project/Quesera/sources/quesera-sm/BreStableCoin/contracts/BlackList.sol\":{\"keccak256\":\"0xe55e566d04babfbfd9f2ebd88f16243e1a1b85e46323d579c507371ee17217b7\",\"urls\":[\"bzzr://53ceca73146b148ec0903fdc3ad91e0cc2d0b96ac8d2acc32359f7834473c3c4\"]},\"/Users/huyvu/Project/Quesera/sources/quesera-sm/BreStableCoin/contracts/Ownable.sol\":{\"keccak256\":\"0xa51118a737fe5c870c7ff9ffc6bf1fd128bb88947837e7bd41dfa58bf4045d82\",\"urls\":[\"bzzr://9adc2e2b36ba54b89300a12496bd64723d9f90ec9fdbe898c89bf332b91fd148\"]}},\"version\":1}",
+  "bytecode": "0x608060405260008054600160a060020a03191633179055610330806100256000396000f3006080604052600436106100775763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630ecb93c0811461007c57806359bf1abe1461009f5780638da5cb5b146100d4578063e47d606014610105578063e4997dc514610126578063f2fde38b14610147575b600080fd5b34801561008857600080fd5b5061009d600160a060020a0360043516610168565b005b3480156100ab57600080fd5b506100c0600160a060020a03600435166101ce565b604080519115158252519081900360200190f35b3480156100e057600080fd5b506100e96101ec565b60408051600160a060020a039092168252519081900360200190f35b34801561011157600080fd5b506100c0600160a060020a03600435166101fb565b34801561013257600080fd5b5061009d600160a060020a0360043516610210565b34801561015357600080fd5b5061009d600160a060020a0360043516610270565b600054600160a060020a0316331461017f57600080fd5b600160a060020a0381166000818152600160208190526040808320805460ff1916909217909155517f42e160154868087d6bfdc0ca23d96a1c1cfa32f1b72ba9ba27b69b98a0d819dc9190a250565b600160a060020a031660009081526001602052604090205460ff1690565b600054600160a060020a031681565b60016020526000908152604090205460ff1681565b600054600160a060020a0316331461022757600080fd5b600160a060020a038116600081815260016020526040808220805460ff19169055517fd7e9ec6e6ecd65492dce6bf513cd6867560d49544421d0783ddf06e76c24470c9190a250565b600054600160a060020a0316331461028757600080fd5b600160a060020a038116151561029c57600080fd5b60008054604051600160a060020a03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a36000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a03929092169190911790555600a165627a7a723058206f3d0fd0800315068eb7f8ea4ba7a9fa08ca52431f7f0d9e7f791b8503d7725a0029",
+  "deployedBytecode": "0x6080604052600436106100775763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630ecb93c0811461007c57806359bf1abe1461009f5780638da5cb5b146100d4578063e47d606014610105578063e4997dc514610126578063f2fde38b14610147575b600080fd5b34801561008857600080fd5b5061009d600160a060020a0360043516610168565b005b3480156100ab57600080fd5b506100c0600160a060020a03600435166101ce565b604080519115158252519081900360200190f35b3480156100e057600080fd5b506100e96101ec565b60408051600160a060020a039092168252519081900360200190f35b34801561011157600080fd5b506100c0600160a060020a03600435166101fb565b34801561013257600080fd5b5061009d600160a060020a0360043516610210565b34801561015357600080fd5b5061009d600160a060020a0360043516610270565b600054600160a060020a0316331461017f57600080fd5b600160a060020a0381166000818152600160208190526040808320805460ff1916909217909155517f42e160154868087d6bfdc0ca23d96a1c1cfa32f1b72ba9ba27b69b98a0d819dc9190a250565b600160a060020a031660009081526001602052604090205460ff1690565b600054600160a060020a031681565b60016020526000908152604090205460ff1681565b600054600160a060020a0316331461022757600080fd5b600160a060020a038116600081815260016020526040808220805460ff19169055517fd7e9ec6e6ecd65492dce6bf513cd6867560d49544421d0783ddf06e76c24470c9190a250565b600054600160a060020a0316331461028757600080fd5b600160a060020a038116151561029c57600080fd5b60008054604051600160a060020a03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a36000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a03929092169190911790555600a165627a7a723058206f3d0fd0800315068eb7f8ea4ba7a9fa08ca52431f7f0d9e7f791b8503d7725a0029",
+  "sourceMap": "51:756:2:-;;;533:5:6;:18;;-1:-1:-1;;;;;;533:18:6;541:10;533:18;;;51:756:2;;;;;;",
+  "deployedSourceMap": "51:756:2:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;387:147;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;387:147:2;-1:-1:-1;;;;;387:147:2;;;;;;;206:122;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;206:122:2;-1:-1:-1;;;;;206:122:2;;;;;;;;;;;;;;;;;;;;;;;239:20:6;;8:9:-1;5:2;;;30:1;27;20:12;5:2;239:20:6;;;;;;;;-1:-1:-1;;;;;239:20:6;;;;;;;;;;;;;;334:46:2;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;334:46:2;-1:-1:-1;;;;;334:46:2;;;;;540:162;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;540:162:2;-1:-1:-1;;;;;540:162:2;;;;;894:188:6;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;894:188:6;-1:-1:-1;;;;;894:188:6;;;;;387:147:2;699:5:6;;-1:-1:-1;;;;;699:5:6;685:10;:19;677:28;;;;;;-1:-1:-1;;;;;456:24:2;;;;;;483:4;456:24;;;;;;;;:31;;-1:-1:-1;;456:31:2;;;;;;;502:25;;;456:24;502:25;387:147;:::o;206:122::-;-1:-1:-1;;;;;300:21:2;277:4;300:21;;;:13;:21;;;;;;;;;206:122::o;239:20:6:-;;;-1:-1:-1;;;;;239:20:6;;:::o;334:46:2:-;;;;;;;;;;;;;;;:::o;540:162::-;699:5:6;;-1:-1:-1;;;;;699:5:6;685:10;:19;677:28;;;;;;-1:-1:-1;;;;;615:27:2;;645:5;615:27;;;:13;:27;;;;;;:35;;-1:-1:-1;;615:35:2;;;665:30;;;645:5;665:30;540:162;:::o;894:188:6:-;699:5;;-1:-1:-1;;;;;699:5:6;685:10;:19;677:28;;;;;;-1:-1:-1;;;;;974:22:6;;;;966:31;;;;;;1033:5;;;1012:37;;-1:-1:-1;;;;;1012:37:6;;;;1033:5;;;1012:37;;;1059:5;:16;;-1:-1:-1;;1059:16:6;-1:-1:-1;;;;;1059:16:6;;;;;;;;;;894:188::o",
+  "source": "pragma solidity ^0.4.18;\n\nimport \"./Ownable.sol\";\n\ncontract BlackList is Ownable {\n\n    /////// Getter to allow the same blacklist to be used also by other contracts (including upgraded Tether) ///////\n    function getBlackListStatus(address _maker) external constant returns (bool) {\n        return isBlackListed[_maker];\n    }\n\n    mapping (address => bool) public isBlackListed;\n\n    function addBlackList (address _evilUser) public onlyOwner {\n        isBlackListed[_evilUser] = true;\n        emit AddedBlackList(_evilUser);\n    }\n\n    function removeBlackList (address _clearedUser) public onlyOwner {\n        isBlackListed[_clearedUser] = false;\n        emit RemovedBlackList(_clearedUser);\n    }\n\n    event AddedBlackList(address indexed _user);\n\n    event RemovedBlackList(address indexed _user);\n\n}\n",
+  "sourcePath": "/Users/huyvu/Project/Quesera/sources/quesera-sm/BreStableCoin/contracts/BlackList.sol",
+  "ast": {
+    "absolutePath": "/Users/huyvu/Project/Quesera/sources/quesera-sm/BreStableCoin/contracts/BlackList.sol",
+    "exportedSymbols": {
+      "BlackList": [
+        854
+      ]
+    },
+    "id": 855,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 790,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".18"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:2"
+      },
+      {
+        "absolutePath": "/Users/huyvu/Project/Quesera/sources/quesera-sm/BreStableCoin/contracts/Ownable.sol",
+        "file": "./Ownable.sol",
+        "id": 791,
+        "nodeType": "ImportDirective",
+        "scope": 855,
+        "sourceUnit": 2050,
+        "src": "26:23:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 792,
+              "name": "Ownable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2049,
+              "src": "73:7:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Ownable_$2049",
+                "typeString": "contract Ownable"
+              }
+            },
+            "id": 793,
+            "nodeType": "InheritanceSpecifier",
+            "src": "73:7:2"
+          }
+        ],
+        "contractDependencies": [
+          2049
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 854,
+        "linearizedBaseContracts": [
+          854,
+          2049
+        ],
+        "name": "BlackList",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 804,
+              "nodeType": "Block",
+              "src": "283:45:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 800,
+                      "name": "isBlackListed",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 809,
+                      "src": "300:13:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                        "typeString": "mapping(address => bool)"
+                      }
+                    },
+                    "id": 802,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 801,
+                      "name": "_maker",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 795,
+                      "src": "314:6:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "300:21:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 799,
+                  "id": 803,
+                  "nodeType": "Return",
+                  "src": "293:28:2"
+                }
+              ]
+            },
+            "documentation": "//// Getter to allow the same blacklist to be used also by other contracts (including upgraded Tether) ///////",
+            "id": 805,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getBlackListStatus",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 796,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 795,
+                  "name": "_maker",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 805,
+                  "src": "234:14:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 794,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "234:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "233:16:2"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 799,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 798,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 805,
+                  "src": "277:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 797,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "277:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "276:6:2"
+            },
+            "scope": 854,
+            "src": "206:122:2",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "constant": false,
+            "id": 809,
+            "name": "isBlackListed",
+            "nodeType": "VariableDeclaration",
+            "scope": 854,
+            "src": "334:46:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+              "typeString": "mapping(address => bool)"
+            },
+            "typeName": {
+              "id": 808,
+              "keyType": {
+                "id": 806,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "343:7:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "334:25:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                "typeString": "mapping(address => bool)"
+              },
+              "valueType": {
+                "id": 807,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "354:4:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 826,
+              "nodeType": "Block",
+              "src": "446:88:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 820,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 816,
+                        "name": "isBlackListed",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 809,
+                        "src": "456:13:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                          "typeString": "mapping(address => bool)"
+                        }
+                      },
+                      "id": 818,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 817,
+                        "name": "_evilUser",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 811,
+                        "src": "470:9:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "456:24:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 819,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "483:4:2",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "456:31:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 821,
+                  "nodeType": "ExpressionStatement",
+                  "src": "456:31:2"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 823,
+                        "name": "_evilUser",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 811,
+                        "src": "517:9:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 822,
+                      "name": "AddedBlackList",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 849,
+                      "src": "502:14:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 824,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "502:25:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 825,
+                  "nodeType": "EmitStatement",
+                  "src": "497:30:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 827,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 814,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 813,
+                  "name": "onlyOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 2023,
+                  "src": "436:9:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "436:9:2"
+              }
+            ],
+            "name": "addBlackList",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 812,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 811,
+                  "name": "_evilUser",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 827,
+                  "src": "410:17:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 810,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "410:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "409:19:2"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 815,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "446:0:2"
+            },
+            "scope": 854,
+            "src": "387:147:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 844,
+              "nodeType": "Block",
+              "src": "605:97:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 838,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 834,
+                        "name": "isBlackListed",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 809,
+                        "src": "615:13:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                          "typeString": "mapping(address => bool)"
+                        }
+                      },
+                      "id": 836,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 835,
+                        "name": "_clearedUser",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 829,
+                        "src": "629:12:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "615:27:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "66616c7365",
+                      "id": 837,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "645:5:2",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "false"
+                    },
+                    "src": "615:35:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 839,
+                  "nodeType": "ExpressionStatement",
+                  "src": "615:35:2"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 841,
+                        "name": "_clearedUser",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 829,
+                        "src": "682:12:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 840,
+                      "name": "RemovedBlackList",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 853,
+                      "src": "665:16:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 842,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "665:30:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 843,
+                  "nodeType": "EmitStatement",
+                  "src": "660:35:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 845,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 832,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 831,
+                  "name": "onlyOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 2023,
+                  "src": "595:9:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "595:9:2"
+              }
+            ],
+            "name": "removeBlackList",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 830,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 829,
+                  "name": "_clearedUser",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 845,
+                  "src": "566:20:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 828,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "566:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "565:22:2"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 833,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "605:0:2"
+            },
+            "scope": 854,
+            "src": "540:162:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 849,
+            "name": "AddedBlackList",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 848,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 847,
+                  "indexed": true,
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 849,
+                  "src": "729:21:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 846,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "729:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "728:23:2"
+            },
+            "src": "708:44:2"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 853,
+            "name": "RemovedBlackList",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 852,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 851,
+                  "indexed": true,
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 853,
+                  "src": "781:21:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 850,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "781:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "780:23:2"
+            },
+            "src": "758:46:2"
+          }
+        ],
+        "scope": 855,
+        "src": "51:756:2"
+      }
+    ],
+    "src": "0:808:2"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/Users/huyvu/Project/Quesera/sources/quesera-sm/BreStableCoin/contracts/BlackList.sol",
+      "exportedSymbols": {
+        "BlackList": [
+          854
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".18"
+          ]
+        },
+        "id": 790,
+        "name": "PragmaDirective",
+        "src": "0:24:2"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 2050,
+          "absolutePath": "/Users/huyvu/Project/Quesera/sources/quesera-sm/BreStableCoin/contracts/Ownable.sol",
+          "file": "./Ownable.sol",
+          "scope": 855,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 791,
+        "name": "ImportDirective",
+        "src": "26:23:2"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            2049
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            854,
+            2049
+          ],
+          "name": "BlackList",
+          "scope": 855
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": null
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Ownable",
+                  "referencedDeclaration": 2049,
+                  "type": "contract Ownable"
+                },
+                "id": 792,
+                "name": "UserDefinedTypeName",
+                "src": "73:7:2"
+              }
+            ],
+            "id": 793,
+            "name": "InheritanceSpecifier",
+            "src": "73:7:2"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "documentation": "//// Getter to allow the same blacklist to be used also by other contracts (including upgraded Tether) ///////",
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "getBlackListStatus",
+              "payable": false,
+              "scope": 854,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_maker",
+                      "scope": 805,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 794,
+                        "name": "ElementaryTypeName",
+                        "src": "234:7:2"
+                      }
+                    ],
+                    "id": 795,
+                    "name": "VariableDeclaration",
+                    "src": "234:14:2"
+                  }
+                ],
+                "id": 796,
+                "name": "ParameterList",
+                "src": "233:16:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 805,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 797,
+                        "name": "ElementaryTypeName",
+                        "src": "277:4:2"
+                      }
+                    ],
+                    "id": 798,
+                    "name": "VariableDeclaration",
+                    "src": "277:4:2"
+                  }
+                ],
+                "id": 799,
+                "name": "ParameterList",
+                "src": "276:6:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 799
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 809,
+                              "type": "mapping(address => bool)",
+                              "value": "isBlackListed"
+                            },
+                            "id": 800,
+                            "name": "Identifier",
+                            "src": "300:13:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 795,
+                              "type": "address",
+                              "value": "_maker"
+                            },
+                            "id": 801,
+                            "name": "Identifier",
+                            "src": "314:6:2"
+                          }
+                        ],
+                        "id": 802,
+                        "name": "IndexAccess",
+                        "src": "300:21:2"
+                      }
+                    ],
+                    "id": 803,
+                    "name": "Return",
+                    "src": "293:28:2"
+                  }
+                ],
+                "id": 804,
+                "name": "Block",
+                "src": "283:45:2"
+              }
+            ],
+            "id": 805,
+            "name": "FunctionDefinition",
+            "src": "206:122:2"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "isBlackListed",
+              "scope": 854,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(address => bool)",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(address => bool)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 806,
+                    "name": "ElementaryTypeName",
+                    "src": "343:7:2"
+                  },
+                  {
+                    "attributes": {
+                      "name": "bool",
+                      "type": "bool"
+                    },
+                    "id": 807,
+                    "name": "ElementaryTypeName",
+                    "src": "354:4:2"
+                  }
+                ],
+                "id": 808,
+                "name": "Mapping",
+                "src": "334:25:2"
+              }
+            ],
+            "id": 809,
+            "name": "VariableDeclaration",
+            "src": "334:46:2"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "name": "addBlackList",
+              "payable": false,
+              "scope": 854,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_evilUser",
+                      "scope": 827,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 810,
+                        "name": "ElementaryTypeName",
+                        "src": "410:7:2"
+                      }
+                    ],
+                    "id": 811,
+                    "name": "VariableDeclaration",
+                    "src": "410:17:2"
+                  }
+                ],
+                "id": 812,
+                "name": "ParameterList",
+                "src": "409:19:2"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 815,
+                "name": "ParameterList",
+                "src": "446:0:2"
+              },
+              {
+                "attributes": {
+                  "arguments": null
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 2023,
+                      "type": "modifier ()",
+                      "value": "onlyOwner"
+                    },
+                    "id": 813,
+                    "name": "Identifier",
+                    "src": "436:9:2"
+                  }
+                ],
+                "id": 814,
+                "name": "ModifierInvocation",
+                "src": "436:9:2"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 809,
+                                  "type": "mapping(address => bool)",
+                                  "value": "isBlackListed"
+                                },
+                                "id": 816,
+                                "name": "Identifier",
+                                "src": "456:13:2"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 811,
+                                  "type": "address",
+                                  "value": "_evilUser"
+                                },
+                                "id": 817,
+                                "name": "Identifier",
+                                "src": "470:9:2"
+                              }
+                            ],
+                            "id": 818,
+                            "name": "IndexAccess",
+                            "src": "456:24:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "74727565",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "bool",
+                              "type": "bool",
+                              "value": "true"
+                            },
+                            "id": 819,
+                            "name": "Literal",
+                            "src": "483:4:2"
+                          }
+                        ],
+                        "id": 820,
+                        "name": "Assignment",
+                        "src": "456:31:2"
+                      }
+                    ],
+                    "id": 821,
+                    "name": "ExpressionStatement",
+                    "src": "456:31:2"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 849,
+                              "type": "function (address)",
+                              "value": "AddedBlackList"
+                            },
+                            "id": 822,
+                            "name": "Identifier",
+                            "src": "502:14:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 811,
+                              "type": "address",
+                              "value": "_evilUser"
+                            },
+                            "id": 823,
+                            "name": "Identifier",
+                            "src": "517:9:2"
+                          }
+                        ],
+                        "id": 824,
+                        "name": "FunctionCall",
+                        "src": "502:25:2"
+                      }
+                    ],
+                    "id": 825,
+                    "name": "EmitStatement",
+                    "src": "497:30:2"
+                  }
+                ],
+                "id": 826,
+                "name": "Block",
+                "src": "446:88:2"
+              }
+            ],
+            "id": 827,
+            "name": "FunctionDefinition",
+            "src": "387:147:2"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "name": "removeBlackList",
+              "payable": false,
+              "scope": 854,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_clearedUser",
+                      "scope": 845,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 828,
+                        "name": "ElementaryTypeName",
+                        "src": "566:7:2"
+                      }
+                    ],
+                    "id": 829,
+                    "name": "VariableDeclaration",
+                    "src": "566:20:2"
+                  }
+                ],
+                "id": 830,
+                "name": "ParameterList",
+                "src": "565:22:2"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 833,
+                "name": "ParameterList",
+                "src": "605:0:2"
+              },
+              {
+                "attributes": {
+                  "arguments": null
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 2023,
+                      "type": "modifier ()",
+                      "value": "onlyOwner"
+                    },
+                    "id": 831,
+                    "name": "Identifier",
+                    "src": "595:9:2"
+                  }
+                ],
+                "id": 832,
+                "name": "ModifierInvocation",
+                "src": "595:9:2"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 809,
+                                  "type": "mapping(address => bool)",
+                                  "value": "isBlackListed"
+                                },
+                                "id": 834,
+                                "name": "Identifier",
+                                "src": "615:13:2"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 829,
+                                  "type": "address",
+                                  "value": "_clearedUser"
+                                },
+                                "id": 835,
+                                "name": "Identifier",
+                                "src": "629:12:2"
+                              }
+                            ],
+                            "id": 836,
+                            "name": "IndexAccess",
+                            "src": "615:27:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "66616c7365",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "bool",
+                              "type": "bool",
+                              "value": "false"
+                            },
+                            "id": 837,
+                            "name": "Literal",
+                            "src": "645:5:2"
+                          }
+                        ],
+                        "id": 838,
+                        "name": "Assignment",
+                        "src": "615:35:2"
+                      }
+                    ],
+                    "id": 839,
+                    "name": "ExpressionStatement",
+                    "src": "615:35:2"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 853,
+                              "type": "function (address)",
+                              "value": "RemovedBlackList"
+                            },
+                            "id": 840,
+                            "name": "Identifier",
+                            "src": "665:16:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 829,
+                              "type": "address",
+                              "value": "_clearedUser"
+                            },
+                            "id": 841,
+                            "name": "Identifier",
+                            "src": "682:12:2"
+                          }
+                        ],
+                        "id": 842,
+                        "name": "FunctionCall",
+                        "src": "665:30:2"
+                      }
+                    ],
+                    "id": 843,
+                    "name": "EmitStatement",
+                    "src": "660:35:2"
+                  }
+                ],
+                "id": 844,
+                "name": "Block",
+                "src": "605:97:2"
+              }
+            ],
+            "id": 845,
+            "name": "FunctionDefinition",
+            "src": "540:162:2"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "AddedBlackList"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "name": "_user",
+                      "scope": 849,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 846,
+                        "name": "ElementaryTypeName",
+                        "src": "729:7:2"
+                      }
+                    ],
+                    "id": 847,
+                    "name": "VariableDeclaration",
+                    "src": "729:21:2"
+                  }
+                ],
+                "id": 848,
+                "name": "ParameterList",
+                "src": "728:23:2"
+              }
+            ],
+            "id": 849,
+            "name": "EventDefinition",
+            "src": "708:44:2"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "RemovedBlackList"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "name": "_user",
+                      "scope": 853,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 850,
+                        "name": "ElementaryTypeName",
+                        "src": "781:7:2"
+                      }
+                    ],
+                    "id": 851,
+                    "name": "VariableDeclaration",
+                    "src": "781:21:2"
+                  }
+                ],
+                "id": 852,
+                "name": "ParameterList",
+                "src": "780:23:2"
+              }
+            ],
+            "id": 853,
+            "name": "EventDefinition",
+            "src": "758:46:2"
+          }
+        ],
+        "id": 854,
+        "name": "ContractDefinition",
+        "src": "51:756:2"
+      }
+    ],
+    "id": 855,
+    "name": "SourceUnit",
+    "src": "0:808:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.25+commit.59dbf8f1.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2022-04-09T09:32:52.133Z",
+  "devdoc": {
+    "methods": {
+      "transferOwnership(address)": {
+        "details": "Allows the current owner to transfer control of the contract to a newOwner.",
+        "params": {
+          "newOwner": "The address to transfer ownership to."
+        }
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {
+      "getBlackListStatus(address)": {
+        "notice": "//// Getter to allow the same blacklist to be used also by other contracts (including upgraded Tether) ///////"
+      }
+    }
+  }
+}

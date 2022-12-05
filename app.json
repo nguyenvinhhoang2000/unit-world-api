@@ -1,0 +1,16 @@
+{
+    "apps": [
+        {
+            "name": "Quesera-BE-api-server",
+            "script": "server.js",
+            "max_memory_restart": "500M",
+            "watch": false
+        },
+        {
+            "name": "Quesera-Cronb-job-update-stake-status",
+            "script": "src/services/stake/cron-job-update-stake-status.service.js",
+            "max_memory_restart": "500M",
+            "watch": false
+        }
+    ]
+}

@@ -1,0 +1,122 @@
+[
+    {
+        "email": "user_01@desports.gg",
+        "username": "user_01",
+        "password": "abcde12345-",
+        "role": "OG"
+    },
+    {
+        "email": "user_02@desports.gg",
+        "username": "user_02",
+        "password": "abcde12345-",
+        "role": "OG"
+    },
+    {
+        "email": "user_03@desports.gg",
+        "username": "user_03",
+        "password": "abcde12345-",
+        "role": "OG"
+    },
+    {
+        "email": "user_04@desports.gg",
+        "username": "user_04",
+        "password": "abcde12345-",
+        "role": "OG"
+    },
+    {
+        "email": "user_05@desports.gg",
+        "username": "user_05",
+        "password": "abcde12345-",
+        "role": "OG"
+    },
+    {
+        "email": "user_06@desports.gg",
+        "username": "user_06",
+        "password": "abcde12345-",
+        "role": "GM"
+    },
+    {
+        "email": "user_07@desports.gg",
+        "username": "user_07",
+        "password": "abcde12345-",
+        "role": "GM"
+    },
+    {
+        "email": "user_08@desports.gg",
+        "username": "user_08",
+        "password": "abcde12345-",
+        "role": "GM"
+    },
+    {
+        "email": "user_09@desports.gg",
+        "username": "user_09",
+        "password": "abcde12345-",
+        "role": "GM"
+    },
+    {
+        "email": "user_10@desports.gg",
+        "username": "user_10",
+        "password": "abcde12345-",
+        "role": "GM"
+    },
+    {
+        "email": "user_11@desports.gg",
+        "username": "user_11",
+        "password": "abcde12345-",
+        "role": "G"
+    },
+    {
+        "email": "user_12@desports.gg",
+        "username": "user_12",
+        "password": "abcde12345-",
+        "role": "G"
+    },
+    {
+        "email": "user_13@desports.gg",
+        "username": "user_13",
+        "password": "abcde12345-",
+        "role": "G"
+    },
+    {
+        "email": "user_14@desports.gg",
+        "username": "user_14",
+        "password": "abcde12345-",
+        "role": "G"
+    },
+    {
+        "email": "user_15@desports.gg",
+        "username": "user_15",
+        "password": "abcde12345-",
+        "role": "G"
+    },
+    {
+        "email": "user_16@desports.gg",
+        "username": "user_16",
+        "password": "abcde12345-",
+        "role": "G"
+    },
+    {
+        "email": "user_17@desports.gg",
+        "username": "user_17",
+        "password": "abcde12345-",
+        "role": "G"
+    },
+    {
+        "email": "user_18@desports.gg",
+        "username": "user_18",
+        "password": "abcde12345-",
+        "role": "G"
+    },
+    {
+        "email": "user_19@desports.gg",
+        "username": "user_19",
+        "password": "abcde12345-",
+        "role": "G"
+    },
+    {
+        "email": "user_20@desports.gg",
+        "username": "user_20",
+        "password": "abcde12345-",
+        "role": "G"
+    }
+]

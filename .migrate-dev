@@ -1,0 +1,29 @@
+{
+  "lastRun": "1657512011363-init-market.js",
+  "migrations": [
+    {
+      "title": "1648098667622-init-account.js",
+      "timestamp": 1648301839454
+    },
+    {
+      "title": "1649757339451-init-market.js",
+      "timestamp": 1651572430251
+    },
+    {
+      "title": "1654945162048-update-market.js",
+      "timestamp": 1654945418320
+    },
+    {
+      "title": "1657511659491-update-market.js",
+      "timestamp": 1670232359927
+    },
+    {
+      "title": "1657511979403-init-account.js",
+      "timestamp": 1670232360029
+    },
+    {
+      "title": "1657512011363-init-market.js",
+      "timestamp": 1670232360128
+    }
+  ]
+}

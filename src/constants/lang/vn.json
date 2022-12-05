@@ -1,0 +1,34 @@
+{
+    "USER__PASSWORD_INCORRECT": "Your password is incorrect",
+    "USER__NEWPASSWORD_INCORRECT": "Your new password must be different from old one",
+    "USER__USER_IS_NOT_EXIST": "User is not exist",
+    "USER__NOT_FORBIDDEN": "You don't have permission to do",
+    "USER__PERMISSION_DENIED": "Permission Denied",
+    "USER__BLOCKED": "Your user was blocked! Please contact Admin",
+    "USER__WAITING_VERIFICATION": "User must be verified!",
+    "USER__EMAIL_INVALID": "Your email is invalid. You must use valid one to register",
+    "USER__EMAIL_IN_USE": "Email is in use",
+    "USER__USERNAME_IN_USE": "Username is in use",
+    "USER__CONFIRM_PASSWORD_INVALID": "confirm password is incorrect",
+    "USER__USER_VERIFIED": "You were verified",
+    "USER__RESEND_VERIFY_EMAIL_OK": "Resend verification number successfully! Please check your mail!",
+    "USER__VERIFICATION_NUMBER_EXPIRED": "The verification number is expired",
+    "USER__VERIFICATION_NUMBER_INCORRECT": "The verification number is incorrect",
+    "USER__RECAPCHA_INCORRECT": "USER__RECAPCHA_INCORRECT",
+    "USER__REFRESH_TOKEN_EXPIRED": "Refresh token expired",
+
+    "PROJECT__TIME_INCORRECT": "OpenTime must be earlier than CloseTime",
+    "PROJECT__AVATAR_TOO_LARGE": "avatar max size = 10 MB",
+    "PROJECT__NOT_EXIST": "Project is not exist",
+    "PROJECT__CANT_DELETE": "Can't delete project",
+    "PROJECT__DEPLOYED": "Project was deployed",
+    "PROJECT__CANT_UPDATE": "Can't update project",
+    
+    "STAKE_PACKAGE__CANT_UPDATE_PACKAGE": "Only update the package stake while it is not public and has not been staked by a user",
+    "STAKE_PACKAGE__NOT_EXIST": "STAKE_PACKAGE__NOT_EXIST",
+    "STAKE_PACKAGE__NOT_ENOUGHT_SUPPLY": "STAKE_PACKAGE__NOT_ENOUGHT_SUPPLY",
+
+    "STAKE__NOT_EXIST": "STAKE__NOT_EXIST"
+
+
+}

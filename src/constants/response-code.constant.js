@@ -1,0 +1,7 @@
+module.exports = {
+    OK: 200,
+    LOGIN_WITH_PIN: 2011,
+    LOGIN_WITH_OTP: 2002,
+    REDIRECT_SIGN_UP: 2003,
+    USER__NOT_FORBIDDEN: 2004,
+}
